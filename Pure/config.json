@@ -1,0 +1,15 @@
+{
+    "src": {
+      "specification": "src/spec.md",
+      "smt_prelude": "src/prelude.smt2.md",
+      "rules": [
+        "src/lemmas.k.md"
+      ]
+    },
+    "implementations": {
+      "Pure" :
+          {"solc_output": "../src/out/Pure.sol.json"}
+    },
+    "dapp_root": "../src",
+    "host": "127.0.0.1:8080"
+  }
