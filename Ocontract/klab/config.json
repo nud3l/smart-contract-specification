@@ -7,7 +7,7 @@
     ]
   },
   "implementations": {
-    "Token" :
+    "Ocontract" :
         {"solc_output": "../src/out/Ocontract.sol.json"}
   },
   "dapp_root": "../src",
