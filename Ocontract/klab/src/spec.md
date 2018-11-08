@@ -1,0 +1,21 @@
+```
+behaviour addSale of Ocontract
+interface addSale(address seller, address buyer)
+
+types
+
+    id         : uint256
+    completed  : bool
+    collateral : bool
+
+storage
+
+    sales[id].seller     |-> seller
+    sales[id].buyer      |-> buyer
+    sales[id].completed  |-> completed => False
+    sales[id].collateral |-> collateral => False
+    id                   |-> id => id + 1
+
+if
+    VGas >= 100000
+```

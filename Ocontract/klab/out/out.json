@@ -1,0 +1,8 @@
+{
+  "Ocontract_addSale_succ": {
+    "v2n": {
+      "ACCT_ID": "Ocontract"
+    },
+    "act": "Ocontract_addSale.act"
+  }
+}
