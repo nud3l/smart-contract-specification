@@ -1,0 +1,12 @@
+behaviour add of Pure
+interface add(uint256 A, uint256 B)
+
+iff in range uint256
+
+    A + B
+
+if
+
+    VGas > 500
+
+returns A + B

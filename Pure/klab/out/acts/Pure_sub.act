@@ -1,0 +1,12 @@
+behaviour sub of Pure
+interface sub(uint256 A, uint256 B)
+
+iff in range uint256
+
+    A - B
+
+if
+
+    VGas > 500
+
+returns A - B

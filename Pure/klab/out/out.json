@@ -1,0 +1,38 @@
+{
+  "Pure_add_succ": {
+    "v2n": {
+      "ACCT_ID": "Pure"
+    },
+    "act": "Pure_add.act"
+  },
+  "Pure_add_fail": {
+    "v2n": {
+      "ACCT_ID": "Pure"
+    },
+    "act": "Pure_add.act"
+  },
+  "Pure_add2_succ": {
+    "v2n": {
+      "ACCT_ID": "Pure"
+    },
+    "act": "Pure_add2.act"
+  },
+  "Pure_add2_fail": {
+    "v2n": {
+      "ACCT_ID": "Pure"
+    },
+    "act": "Pure_add2.act"
+  },
+  "Pure_sub_succ": {
+    "v2n": {
+      "ACCT_ID": "Pure"
+    },
+    "act": "Pure_sub.act"
+  },
+  "Pure_sub_fail": {
+    "v2n": {
+      "ACCT_ID": "Pure"
+    },
+    "act": "Pure_sub.act"
+  }
+}
