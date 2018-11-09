@@ -1,0 +1,12 @@
+behaviour mul of Pure
+interface mul(uint256 A, uint256 B)
+
+iff in range uint256
+
+    A * B
+
+if
+
+    VGas > 700
+
+returns A * B

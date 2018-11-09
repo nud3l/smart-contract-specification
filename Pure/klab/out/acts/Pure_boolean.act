@@ -1,0 +1,12 @@
+behaviour boolean of Pure
+interface boolean(uint256 A, uint256 B)
+
+iff
+
+    A < B
+
+if
+
+    VGas > 500
+
+returns 1

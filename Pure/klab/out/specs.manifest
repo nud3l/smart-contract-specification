@@ -4,3 +4,9 @@ Pure_add2_succ
 Pure_add2_fail
 Pure_sub_succ
 Pure_sub_fail
+Pure_mul_succ
+Pure_mul_fail
+Pure_smaller_succ
+Pure_smaller_fail
+Pure_equal_succ
+Pure_equal_fail

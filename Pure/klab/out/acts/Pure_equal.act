@@ -1,0 +1,12 @@
+behaviour equal of Pure
+interface equal(uint256 A, uint256 B)
+
+iff
+
+    A == B
+
+if
+
+    VGas > 500
+
+returns 1

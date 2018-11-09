@@ -16,7 +16,14 @@ contract Pure {
     }
 
     function mul(uint256 a, uint256 b) public pure returns (uint256 z) {
-        require((z = a * b) >= a, "overflow");
+        if (a == 0) {
+            return 0;
+        }
+        
+        require(((a * b) / a) == b, "overflow");
+        z = a * b;
+
+        return z;
     }
 
     function smaller(uint256 a, uint256 b) public pure returns (bool) {
