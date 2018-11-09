@@ -63,14 +63,12 @@ contract ERC20 {
         require(value <= _balances[from]);
         require(to != address(0));
 
-        uint256 myTokenSupply = _totalSupply;
         uint256 fromBalance = _balances[from];
         uint256 toBalance = _balances[to];
 
         _balances[from] = _balances[from].sub(value);
         _balances[to] = _balances[to].add(value);
 
-        assert(_totalSupply == myTokenSupply);
         assert(_balances[from] == (fromBalance - value));
         assert(_balances[to] == (toBalance - value));
 
