@@ -34,5 +34,41 @@
       "ACCT_ID": "Pure"
     },
     "act": "Pure_sub.act"
+  },
+  "Pure_mul_succ": {
+    "v2n": {
+      "ACCT_ID": "Pure"
+    },
+    "act": "Pure_mul.act"
+  },
+  "Pure_mul_fail": {
+    "v2n": {
+      "ACCT_ID": "Pure"
+    },
+    "act": "Pure_mul.act"
+  },
+  "Pure_smaller_succ": {
+    "v2n": {
+      "ACCT_ID": "Pure"
+    },
+    "act": "Pure_smaller.act"
+  },
+  "Pure_smaller_fail": {
+    "v2n": {
+      "ACCT_ID": "Pure"
+    },
+    "act": "Pure_smaller.act"
+  },
+  "Pure_equal_succ": {
+    "v2n": {
+      "ACCT_ID": "Pure"
+    },
+    "act": "Pure_equal.act"
+  },
+  "Pure_equal_fail": {
+    "v2n": {
+      "ACCT_ID": "Pure"
+    },
+    "act": "Pure_equal.act"
   }
 }
