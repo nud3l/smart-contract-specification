@@ -3,7 +3,7 @@
 // See <https://github.com/ethereum/EIPs/issues/20>.
 // Adopted from https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/token/ERC20/ERC20.sol
 
-// pragma solidity ^0.4.24;
+pragma experimental SMTChecker;
 
 import "./SafeMath.sol";
 
