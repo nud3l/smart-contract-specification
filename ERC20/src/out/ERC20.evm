@@ -1,0 +1,1725 @@
+    /* "ERC20.sol":273:2318  contract ERC20 {... */
+  mstore(0x40, 0x80)
+  callvalue
+    /* "--CODEGEN--":8:17   */
+  dup1
+    /* "--CODEGEN--":5:7   */
+  iszero
+  tag_1
+  jumpi
+    /* "--CODEGEN--":30:31   */
+  0x0
+    /* "--CODEGEN--":27:28   */
+  dup1
+    /* "--CODEGEN--":20:32   */
+  revert
+    /* "--CODEGEN--":5:7   */
+tag_1:
+    /* "ERC20.sol":273:2318  contract ERC20 {... */
+  pop
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x0
+  codecopy
+  0x0
+  return
+stop
+
+sub_0: assembly {
+        /* "ERC20.sol":273:2318  contract ERC20 {... */
+      mstore(0x40, 0x80)
+      jumpi(tag_1, lt(calldatasize, 0x4))
+      calldataload(0x0)
+      0x100000000000000000000000000000000000000000000000000000000
+      swap1
+      div
+      0xffffffff
+      and
+      dup1
+      0x95ea7b3
+      eq
+      tag_2
+      jumpi
+      dup1
+      0x18160ddd
+      eq
+      tag_3
+      jumpi
+      dup1
+      0x23b872dd
+      eq
+      tag_4
+      jumpi
+      dup1
+      0x3eaaf86b
+      eq
+      tag_5
+      jumpi
+      dup1
+      0x6ebcf607
+      eq
+      tag_6
+      jumpi
+      dup1
+      0x70a08231
+      eq
+      tag_7
+      jumpi
+      dup1
+      0xa9059cbb
+      eq
+      tag_8
+      jumpi
+      dup1
+      0xba0fb861
+      eq
+      tag_9
+      jumpi
+      dup1
+      0xdd62ed3e
+      eq
+      tag_10
+      jumpi
+    tag_1:
+      0x0
+      dup1
+      revert
+        /* "ERC20.sol":981:1280  function approve(address spender, uint256 value) public returns (bool) {... */
+    tag_2:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_11
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_11:
+        /* "ERC20.sol":981:1280  function approve(address spender, uint256 value) public returns (bool) {... */
+      pop
+      tag_12
+      0x4
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_13
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x0
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_13:
+        /* "ERC20.sol":981:1280  function approve(address spender, uint256 value) public returns (bool) {... */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_14)
+    tag_12:
+      mload(0x40)
+      dup1
+      dup3
+      iszero
+      iszero
+      iszero
+      iszero
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "ERC20.sol":568:657  function totalSupply() public view returns (uint256) {... */
+    tag_3:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_15
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_15:
+        /* "ERC20.sol":568:657  function totalSupply() public view returns (uint256) {... */
+      pop
+      tag_16
+      jump(tag_17)
+    tag_16:
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "ERC20.sol":1429:1709  function transferFrom(address from, address to, uint256 value) public returns (bool) {... */
+    tag_4:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_18
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_18:
+        /* "ERC20.sol":1429:1709  function transferFrom(address from, address to, uint256 value) public returns (bool) {... */
+      pop
+      tag_19
+      0x4
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x60
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_20
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x0
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_20:
+        /* "ERC20.sol":1429:1709  function transferFrom(address from, address to, uint256 value) public returns (bool) {... */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_21)
+    tag_19:
+      mload(0x40)
+      dup1
+      dup3
+      iszero
+      iszero
+      iszero
+      iszero
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "ERC20.sol":534:561  uint256 public _totalSupply */
+    tag_5:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_22
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_22:
+        /* "ERC20.sol":534:561  uint256 public _totalSupply */
+      pop
+      tag_23
+      jump(tag_24)
+    tag_23:
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "ERC20.sol":412:457  mapping (address => uint256) public _balances */
+    tag_6:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_25
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_25:
+        /* "ERC20.sol":412:457  mapping (address => uint256) public _balances */
+      pop
+      tag_26
+      0x4
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_27
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x0
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_27:
+        /* "ERC20.sol":412:457  mapping (address => uint256) public _balances */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_28)
+    tag_26:
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "ERC20.sol":663:767  function balanceOf(address owner) public view returns (uint256) {... */
+    tag_7:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_29
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_29:
+        /* "ERC20.sol":663:767  function balanceOf(address owner) public view returns (uint256) {... */
+      pop
+      tag_30
+      0x4
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_31
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x0
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_31:
+        /* "ERC20.sol":663:767  function balanceOf(address owner) public view returns (uint256) {... */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_32)
+    tag_30:
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "ERC20.sol":1286:1423  function transfer(address to, uint256 value) public returns (bool) {... */
+    tag_8:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_33
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_33:
+        /* "ERC20.sol":1286:1423  function transfer(address to, uint256 value) public returns (bool) {... */
+      pop
+      tag_34
+      0x4
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_35
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x0
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_35:
+        /* "ERC20.sol":1286:1423  function transfer(address to, uint256 value) public returns (bool) {... */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_36)
+    tag_34:
+      mload(0x40)
+      dup1
+      dup3
+      iszero
+      iszero
+      iszero
+      iszero
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "ERC20.sol":463:528  mapping (address => mapping (address => uint256)) public _allowed */
+    tag_9:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_37
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_37:
+        /* "ERC20.sol":463:528  mapping (address => mapping (address => uint256)) public _allowed */
+      pop
+      tag_38
+      0x4
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_39
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x0
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_39:
+        /* "ERC20.sol":463:528  mapping (address => mapping (address => uint256)) public _allowed */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_40)
+    tag_38:
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "ERC20.sol":773:899  function allowance(address owner, address spender) public view returns (uint) {... */
+    tag_10:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_41
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_41:
+        /* "ERC20.sol":773:899  function allowance(address owner, address spender) public view returns (uint) {... */
+      pop
+      tag_42
+      0x4
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_43
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x0
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_43:
+        /* "ERC20.sol":773:899  function allowance(address owner, address spender) public view returns (uint) {... */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_44)
+    tag_42:
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "ERC20.sol":981:1280  function approve(address spender, uint256 value) public returns (bool) {... */
+    tag_14:
+        /* "ERC20.sol":1046:1050  bool */
+      0x0
+        /* "ERC20.sol":1089:1090  0 */
+      dup1
+        /* "ERC20.sol":1070:1091  spender != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "ERC20.sol":1070:1077  spender */
+      dup4
+        /* "ERC20.sol":1070:1091  spender != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      eq
+      iszero
+        /* "ERC20.sol":1062:1092  require(spender != address(0)) */
+      iszero
+      iszero
+      tag_46
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_46:
+        /* "ERC20.sol":1135:1140  value */
+      dup2
+        /* "ERC20.sol":1103:1111  _allowed */
+      0x1
+        /* "ERC20.sol":1103:1123  _allowed[msg.sender] */
+      0x0
+        /* "ERC20.sol":1112:1122  msg.sender */
+      caller
+        /* "ERC20.sol":1103:1123  _allowed[msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+        /* "ERC20.sol":1103:1132  _allowed[msg.sender][spender] */
+      0x0
+        /* "ERC20.sol":1124:1131  spender */
+      dup6
+        /* "ERC20.sol":1103:1132  _allowed[msg.sender][spender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+        /* "ERC20.sol":1103:1140  _allowed[msg.sender][spender] = value */
+      dup2
+      swap1
+      sstore
+      pop
+        /* "ERC20.sol":1191:1196  value */
+      dup2
+        /* "ERC20.sol":1158:1166  _allowed */
+      0x1
+        /* "ERC20.sol":1158:1178  _allowed[msg.sender] */
+      0x0
+        /* "ERC20.sol":1167:1177  msg.sender */
+      caller
+        /* "ERC20.sol":1158:1178  _allowed[msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+        /* "ERC20.sol":1158:1187  _allowed[msg.sender][spender] */
+      0x0
+        /* "ERC20.sol":1179:1186  spender */
+      dup6
+        /* "ERC20.sol":1158:1187  _allowed[msg.sender][spender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "ERC20.sol":1158:1196  _allowed[msg.sender][spender] == value */
+      eq
+        /* "ERC20.sol":1151:1197  assert(_allowed[msg.sender][spender] == value) */
+      iszero
+      iszero
+      tag_47
+      jumpi
+      invalid
+    tag_47:
+        /* "ERC20.sol":1269:1273  true */
+      0x1
+        /* "ERC20.sol":1262:1273  return true */
+      swap1
+      pop
+        /* "ERC20.sol":981:1280  function approve(address spender, uint256 value) public returns (bool) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "ERC20.sol":568:657  function totalSupply() public view returns (uint256) {... */
+    tag_17:
+        /* "ERC20.sol":612:619  uint256 */
+      0x0
+        /* "ERC20.sol":638:650  _totalSupply */
+      sload(0x2)
+        /* "ERC20.sol":631:650  return _totalSupply */
+      swap1
+      pop
+        /* "ERC20.sol":568:657  function totalSupply() public view returns (uint256) {... */
+      swap1
+      jump	// out
+        /* "ERC20.sol":1429:1709  function transferFrom(address from, address to, uint256 value) public returns (bool) {... */
+    tag_21:
+        /* "ERC20.sol":1508:1512  bool */
+      0x0
+        /* "ERC20.sol":1541:1549  _allowed */
+      0x1
+        /* "ERC20.sol":1541:1555  _allowed[from] */
+      0x0
+        /* "ERC20.sol":1550:1554  from */
+      dup6
+        /* "ERC20.sol":1541:1555  _allowed[from] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+        /* "ERC20.sol":1541:1567  _allowed[from][msg.sender] */
+      0x0
+        /* "ERC20.sol":1556:1566  msg.sender */
+      caller
+        /* "ERC20.sol":1541:1567  _allowed[from][msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "ERC20.sol":1532:1537  value */
+      dup3
+        /* "ERC20.sol":1532:1567  value <= _allowed[from][msg.sender] */
+      gt
+      iszero
+        /* "ERC20.sol":1524:1568  require(value <= _allowed[from][msg.sender]) */
+      iszero
+      iszero
+      tag_50
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_50:
+        /* "ERC20.sol":1608:1645  _allowed[from][msg.sender].sub(value) */
+      tag_51
+        /* "ERC20.sol":1639:1644  value */
+      dup3
+        /* "ERC20.sol":1608:1616  _allowed */
+      0x1
+        /* "ERC20.sol":1608:1622  _allowed[from] */
+      0x0
+        /* "ERC20.sol":1617:1621  from */
+      dup8
+        /* "ERC20.sol":1608:1622  _allowed[from] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+        /* "ERC20.sol":1608:1634  _allowed[from][msg.sender] */
+      0x0
+        /* "ERC20.sol":1623:1633  msg.sender */
+      caller
+        /* "ERC20.sol":1608:1634  _allowed[from][msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "ERC20.sol":1608:1638  _allowed[from][msg.sender].sub */
+      tag_52
+      swap1
+        /* "ERC20.sol":1608:1645  _allowed[from][msg.sender].sub(value) */
+      swap2
+      swap1
+      0xffffffff
+      and
+      jump	// in
+    tag_51:
+        /* "ERC20.sol":1579:1587  _allowed */
+      0x1
+        /* "ERC20.sol":1579:1593  _allowed[from] */
+      0x0
+        /* "ERC20.sol":1588:1592  from */
+      dup7
+        /* "ERC20.sol":1579:1593  _allowed[from] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+        /* "ERC20.sol":1579:1605  _allowed[from][msg.sender] */
+      0x0
+        /* "ERC20.sol":1594:1604  msg.sender */
+      caller
+        /* "ERC20.sol":1579:1605  _allowed[from][msg.sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+        /* "ERC20.sol":1579:1645  _allowed[from][msg.sender] = _allowed[from][msg.sender].sub(value) */
+      dup2
+      swap1
+      sstore
+      pop
+        /* "ERC20.sol":1655:1681  _transfer(from, to, value) */
+      tag_53
+        /* "ERC20.sol":1665:1669  from */
+      dup5
+        /* "ERC20.sol":1671:1673  to */
+      dup5
+        /* "ERC20.sol":1675:1680  value */
+      dup5
+        /* "ERC20.sol":1655:1664  _transfer */
+      tag_54
+        /* "ERC20.sol":1655:1681  _transfer(from, to, value) */
+      jump	// in
+    tag_53:
+        /* "ERC20.sol":1698:1702  true */
+      0x1
+        /* "ERC20.sol":1691:1702  return true */
+      swap1
+      pop
+        /* "ERC20.sol":1429:1709  function transferFrom(address from, address to, uint256 value) public returns (bool) {... */
+      swap4
+      swap3
+      pop
+      pop
+      pop
+      jump	// out
+        /* "ERC20.sol":534:561  uint256 public _totalSupply */
+    tag_24:
+      sload(0x2)
+      dup2
+      jump	// out
+        /* "ERC20.sol":412:457  mapping (address => uint256) public _balances */
+    tag_28:
+      mstore(0x20, 0x0)
+      dup1
+      0x0
+      mstore
+      keccak256(0x0, 0x40)
+      0x0
+      swap2
+      pop
+      swap1
+      pop
+      sload
+      dup2
+      jump	// out
+        /* "ERC20.sol":663:767  function balanceOf(address owner) public view returns (uint256) {... */
+    tag_32:
+        /* "ERC20.sol":718:725  uint256 */
+      0x0
+        /* "ERC20.sol":744:753  _balances */
+      dup1
+        /* "ERC20.sol":744:760  _balances[owner] */
+      0x0
+        /* "ERC20.sol":754:759  owner */
+      dup4
+        /* "ERC20.sol":744:760  _balances[owner] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "ERC20.sol":737:760  return _balances[owner] */
+      swap1
+      pop
+        /* "ERC20.sol":663:767  function balanceOf(address owner) public view returns (uint256) {... */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "ERC20.sol":1286:1423  function transfer(address to, uint256 value) public returns (bool) {... */
+    tag_36:
+        /* "ERC20.sol":1347:1351  bool */
+      0x0
+        /* "ERC20.sol":1363:1395  _transfer(msg.sender, to, value) */
+      tag_57
+        /* "ERC20.sol":1373:1383  msg.sender */
+      caller
+        /* "ERC20.sol":1385:1387  to */
+      dup5
+        /* "ERC20.sol":1389:1394  value */
+      dup5
+        /* "ERC20.sol":1363:1372  _transfer */
+      tag_54
+        /* "ERC20.sol":1363:1395  _transfer(msg.sender, to, value) */
+      jump	// in
+    tag_57:
+        /* "ERC20.sol":1412:1416  true */
+      0x1
+        /* "ERC20.sol":1405:1416  return true */
+      swap1
+      pop
+        /* "ERC20.sol":1286:1423  function transfer(address to, uint256 value) public returns (bool) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "ERC20.sol":463:528  mapping (address => mapping (address => uint256)) public _allowed */
+    tag_40:
+      mstore(0x20, 0x1)
+      dup2
+      0x0
+      mstore
+      mstore(0x20, keccak256(0x0, 0x40))
+      dup1
+      0x0
+      mstore
+      keccak256(0x0, 0x40)
+      0x0
+      swap2
+      pop
+      swap2
+      pop
+      pop
+      sload
+      dup2
+      jump	// out
+        /* "ERC20.sol":773:899  function allowance(address owner, address spender) public view returns (uint) {... */
+    tag_44:
+        /* "ERC20.sol":845:849  uint */
+      0x0
+        /* "ERC20.sol":868:876  _allowed */
+      0x1
+        /* "ERC20.sol":868:883  _allowed[owner] */
+      0x0
+        /* "ERC20.sol":877:882  owner */
+      dup5
+        /* "ERC20.sol":868:883  _allowed[owner] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+        /* "ERC20.sol":868:892  _allowed[owner][spender] */
+      0x0
+        /* "ERC20.sol":884:891  spender */
+      dup4
+        /* "ERC20.sol":868:892  _allowed[owner][spender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "ERC20.sol":861:892  return _allowed[owner][spender] */
+      swap1
+      pop
+        /* "ERC20.sol":773:899  function allowance(address owner, address spender) public view returns (uint) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "SafeMath.sol":1081:1212  function sub(uint256 a, uint256 b) internal pure returns (uint256) {... */
+    tag_52:
+        /* "SafeMath.sol":1139:1146  uint256 */
+      0x0
+        /* "SafeMath.sol":1167:1168  a */
+      dup3
+        /* "SafeMath.sol":1162:1163  b */
+      dup3
+        /* "SafeMath.sol":1162:1168  b <= a */
+      gt
+      iszero
+        /* "SafeMath.sol":1154:1169  require(b <= a) */
+      iszero
+      iszero
+      tag_60
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_60:
+        /* "SafeMath.sol":1175:1184  uint256 c */
+      0x0
+        /* "SafeMath.sol":1191:1192  b */
+      dup3
+        /* "SafeMath.sol":1187:1188  a */
+      dup5
+        /* "SafeMath.sol":1187:1192  a - b */
+      sub
+        /* "SafeMath.sol":1175:1192  uint256 c = a - b */
+      swap1
+      pop
+        /* "SafeMath.sol":1206:1207  c */
+      dup1
+        /* "SafeMath.sol":1199:1207  return c */
+      swap2
+      pop
+      pop
+        /* "SafeMath.sol":1081:1212  function sub(uint256 a, uint256 b) internal pure returns (uint256) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "ERC20.sol":1716:2316  function _transfer(address from, address to, uint256 value) internal {... */
+    tag_54:
+        /* "ERC20.sol":1812:1821  _balances */
+      0x0
+        /* "ERC20.sol":1812:1827  _balances[from] */
+      dup1
+        /* "ERC20.sol":1822:1826  from */
+      dup5
+        /* "ERC20.sol":1812:1827  _balances[from] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "ERC20.sol":1803:1808  value */
+      dup2
+        /* "ERC20.sol":1803:1827  value <= _balances[from] */
+      gt
+      iszero
+        /* "ERC20.sol":1795:1828  require(value <= _balances[from]) */
+      iszero
+      iszero
+      tag_62
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_62:
+        /* "ERC20.sol":1860:1861  0 */
+      0x0
+        /* "ERC20.sol":1846:1862  to != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "ERC20.sol":1846:1848  to */
+      dup3
+        /* "ERC20.sol":1846:1862  to != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      eq
+      iszero
+        /* "ERC20.sol":1838:1863  require(to != address(0)) */
+      iszero
+      iszero
+      tag_63
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_63:
+        /* "ERC20.sol":1874:1895  uint256 myTokenSupply */
+      0x0
+        /* "ERC20.sol":1898:1910  _totalSupply */
+      sload(0x2)
+        /* "ERC20.sol":1874:1910  uint256 myTokenSupply = _totalSupply */
+      swap1
+      pop
+        /* "ERC20.sol":1920:1939  uint256 fromBalance */
+      0x0
+        /* "ERC20.sol":1942:1951  _balances */
+      dup1
+        /* "ERC20.sol":1942:1957  _balances[from] */
+      0x0
+        /* "ERC20.sol":1952:1956  from */
+      dup7
+        /* "ERC20.sol":1942:1957  _balances[from] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "ERC20.sol":1920:1957  uint256 fromBalance = _balances[from] */
+      swap1
+      pop
+        /* "ERC20.sol":1967:1984  uint256 toBalance */
+      0x0
+        /* "ERC20.sol":1987:1996  _balances */
+      dup1
+        /* "ERC20.sol":1987:2000  _balances[to] */
+      0x0
+        /* "ERC20.sol":1997:1999  to */
+      dup7
+        /* "ERC20.sol":1987:2000  _balances[to] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "ERC20.sol":1967:2000  uint256 toBalance = _balances[to] */
+      swap1
+      pop
+        /* "ERC20.sol":2029:2055  _balances[from].sub(value) */
+      tag_64
+        /* "ERC20.sol":2049:2054  value */
+      dup5
+        /* "ERC20.sol":2029:2038  _balances */
+      0x0
+        /* "ERC20.sol":2029:2044  _balances[from] */
+      dup1
+        /* "ERC20.sol":2039:2043  from */
+      dup10
+        /* "ERC20.sol":2029:2044  _balances[from] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "ERC20.sol":2029:2048  _balances[from].sub */
+      tag_52
+      swap1
+        /* "ERC20.sol":2029:2055  _balances[from].sub(value) */
+      swap2
+      swap1
+      0xffffffff
+      and
+      jump	// in
+    tag_64:
+        /* "ERC20.sol":2011:2020  _balances */
+      0x0
+        /* "ERC20.sol":2011:2026  _balances[from] */
+      dup1
+        /* "ERC20.sol":2021:2025  from */
+      dup9
+        /* "ERC20.sol":2011:2026  _balances[from] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+        /* "ERC20.sol":2011:2055  _balances[from] = _balances[from].sub(value) */
+      dup2
+      swap1
+      sstore
+      pop
+        /* "ERC20.sol":2081:2105  _balances[to].add(value) */
+      tag_65
+        /* "ERC20.sol":2099:2104  value */
+      dup5
+        /* "ERC20.sol":2081:2090  _balances */
+      0x0
+        /* "ERC20.sol":2081:2094  _balances[to] */
+      dup1
+        /* "ERC20.sol":2091:2093  to */
+      dup9
+        /* "ERC20.sol":2081:2094  _balances[to] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "ERC20.sol":2081:2098  _balances[to].add */
+      tag_66
+      swap1
+        /* "ERC20.sol":2081:2105  _balances[to].add(value) */
+      swap2
+      swap1
+      0xffffffff
+      and
+      jump	// in
+    tag_65:
+        /* "ERC20.sol":2065:2074  _balances */
+      0x0
+        /* "ERC20.sol":2065:2078  _balances[to] */
+      dup1
+        /* "ERC20.sol":2075:2077  to */
+      dup8
+        /* "ERC20.sol":2065:2078  _balances[to] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+        /* "ERC20.sol":2065:2105  _balances[to] = _balances[to].add(value) */
+      dup2
+      swap1
+      sstore
+      pop
+        /* "ERC20.sol":2139:2152  myTokenSupply */
+      dup3
+        /* "ERC20.sol":2123:2135  _totalSupply */
+      sload(0x2)
+        /* "ERC20.sol":2123:2152  _totalSupply == myTokenSupply */
+      eq
+        /* "ERC20.sol":2116:2153  assert(_totalSupply == myTokenSupply) */
+      iszero
+      iszero
+      tag_67
+      jumpi
+      invalid
+    tag_67:
+        /* "ERC20.sol":2204:2209  value */
+      dup4
+        /* "ERC20.sol":2190:2201  fromBalance */
+      dup3
+        /* "ERC20.sol":2190:2209  fromBalance - value */
+      sub
+        /* "ERC20.sol":2170:2179  _balances */
+      0x0
+        /* "ERC20.sol":2170:2185  _balances[from] */
+      dup1
+        /* "ERC20.sol":2180:2184  from */
+      dup9
+        /* "ERC20.sol":2170:2185  _balances[from] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "ERC20.sol":2170:2210  _balances[from] == (fromBalance - value) */
+      eq
+        /* "ERC20.sol":2163:2211  assert(_balances[from] == (fromBalance - value)) */
+      iszero
+      iszero
+      tag_68
+      jumpi
+      invalid
+    tag_68:
+        /* "ERC20.sol":2258:2263  value */
+      dup4
+        /* "ERC20.sol":2246:2255  toBalance */
+      dup2
+        /* "ERC20.sol":2246:2263  toBalance - value */
+      sub
+        /* "ERC20.sol":2228:2237  _balances */
+      0x0
+        /* "ERC20.sol":2228:2241  _balances[to] */
+      dup1
+        /* "ERC20.sol":2238:2240  to */
+      dup8
+        /* "ERC20.sol":2228:2241  _balances[to] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x0
+      keccak256
+      sload
+        /* "ERC20.sol":2228:2264  _balances[to] == (toBalance - value) */
+      eq
+        /* "ERC20.sol":2221:2265  assert(_balances[to] == (toBalance - value)) */
+      iszero
+      iszero
+      tag_69
+      jumpi
+      invalid
+    tag_69:
+        /* "ERC20.sol":1716:2316  function _transfer(address from, address to, uint256 value) internal {... */
+      pop
+      pop
+      pop
+      pop
+      pop
+      pop
+      jump	// out
+        /* "SafeMath.sol":1275:1406  function add(uint256 a, uint256 b) internal pure returns (uint256) {... */
+    tag_66:
+        /* "SafeMath.sol":1333:1340  uint256 */
+      0x0
+        /* "SafeMath.sol":1348:1357  uint256 c */
+      dup1
+        /* "SafeMath.sol":1364:1365  b */
+      dup3
+        /* "SafeMath.sol":1360:1361  a */
+      dup5
+        /* "SafeMath.sol":1360:1365  a + b */
+      add
+        /* "SafeMath.sol":1348:1365  uint256 c = a + b */
+      swap1
+      pop
+        /* "SafeMath.sol":1384:1385  a */
+      dup4
+        /* "SafeMath.sol":1379:1380  c */
+      dup2
+        /* "SafeMath.sol":1379:1385  c >= a */
+      lt
+      iszero
+        /* "SafeMath.sol":1371:1386  require(c >= a) */
+      iszero
+      iszero
+      tag_71
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_71:
+        /* "SafeMath.sol":1400:1401  c */
+      dup1
+        /* "SafeMath.sol":1393:1401  return c */
+      swap2
+      pop
+      pop
+        /* "SafeMath.sol":1275:1406  function add(uint256 a, uint256 b) internal pure returns (uint256) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+
+    auxdata: 0xa165627a7a7230582087c0097cda17d7ac6d9862d2d88fff06a04c60b2296e0ffe40d2daeb7aeb68700029
+}
