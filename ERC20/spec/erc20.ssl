@@ -1,0 +1,38 @@
+contract ERC20
+
+@storage
+totalSupply: uint256
+balances: mapping(address => uint256)
+allowance: mapping(address => mapping (address => uint256))
+
+@global ERC20
+assert(constant totalSupply)
+
+@function getBalance
+interface getBalance(Owner: address)
+
+    storage balances
+
+    assert(gas < 500)
+
+    returns balances(owner)
+
+@function transfer
+interface transfer(Receiver: address, Value: uint256)
+
+    storage balances
+
+    memory Sender: msg.sender
+
+    assert(gas < 8000)
+    assert(equal, balances(Sender) + balances(Receiver), balances(Sender) + balances(Receiver), _ )
+    assert(equal, balances(Sender) + Value, balances(Sender), _ )
+
+@function transferFrom
+interface transferFrom(Sender: address, Receiver: address, Value:uint)
+
+    storage balances
+
+    assert(gas < 8000)
+    assert(equal, balances(Sender) + balances(Receiver), balances(Sender) + balances(Receiver), _ )
+    assert(equal, balances(Sender) + Value, balances(Sender), _ )
