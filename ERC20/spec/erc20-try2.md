@@ -2,7 +2,7 @@
 
 ## Config
 
-Global configuration parameters. Indicates which dsitrubted VM to target like EVM, eWASM etc.
+Global configuration parameters. Indicates which distributed VM to target like EVM, eWASM etc.
 
 ```
 @config
@@ -35,7 +35,7 @@ Questions:
 
 ## Global
 
-Global constraints are invariants that should hold for the entire life of a contract. This should also ensure that no function exsits which changes any of the assumptions made here.
+Global constraints are invariants that should hold for the entire life of a contract. This should also ensure that no function exists which changes any of the assumptions made here.
 
 ```
 @global
@@ -69,7 +69,7 @@ ensures:
 Questions:
 
 - How to define the function interface? The sender can be send explicitly as (address sender) or called implicitly as msg.sender in Solidity? How does that look on bytecode level?
-- Do we need to redfine balance here?
+- Do we need to redefine balance here?
 - Do we infer that this is a pure function as it does not change any parameter?
 
 ```
