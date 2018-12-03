@@ -7,13 +7,13 @@ Global configuration parameters. Indicates which dsitrubted VM to target like EV
 ```
 @config
 target : EVM
-contract: Solidity
-gas: 6000000
+contract : Solidity
+gas : Int = 6000000
 ```
 
 Questions:
 
-- Likeley skip this for now and default the config to EVM, Solidity, and a maximum gas assumption.
+- Likely skip this for now and default the config to EVM, Solidity, and a maximum gas assumption.
 
 ## Storage
 
@@ -21,10 +21,10 @@ Defines the storage variables of the overall contract. This defines later use of
 
 ```
 @storage
-totalSupply : int
-address : address
+totalSupply : Int
+address : Address
 balances[address] => balance : Int
-allowances[address] => allowance
+allowances[address] => allowance : Int
 ```
 
 Questions:
@@ -39,11 +39,54 @@ Global constraints are invariants that should hold for the entire life of a cont
 
 ```
 @global
-totalSupply = 10000;
+totalSupply = 10000
 balance >= 0
 balance <= totalSupply
 ```
 
+Questions:
+
+- How to enforce these values based on the functions?
+- How to prove that there exists NO function in the contract that touches these constraints? For example, if an ERC20 has a function that increases the totalSupply and a balance, how to check that it does not exist?
+- Further, totalSupply and balances are decoupled. Just checking totalSupply might actually not be helpful. Is there a way to get a (sum of all balances == totalSupply)?
+
 ## Functions
 
 Define function level specs.
+
+```
+@function getBalances
+inputs:
+    sender: Address
+
+outputs:
+    balance
+
+ensures:
+    balances[sender] == balance
+```
+
+Questions:
+
+- How to define the function interface? The sender can be send explicitly as (address sender) or called implicitly as msg.sender in Solidity? How does that look on bytecode level?
+- Do we need to redfine balance here?
+- Do we infer that this is a pure function as it does not change any parameter?
+
+```
+@function transfer
+inputs:
+    sender: Address
+    receiver: Address
+    amount: Int
+
+assigns:
+    balances[sender]
+    balances[receiver]
+
+requires:
+    balances[sender] >= amount
+
+ensures:
+    balances[sender] == initial(balances[sender] - amount)
+    balances[receiver] == initial(balances[receiver] + amount)
+```
