@@ -45,7 +45,7 @@ Proofs can be verified using klab server with:
 klab run
 ```
 
-Next, we try to find a different way to write these specifications, whic compile to the same or similar K reachability proofs created by KLab. Those specifications are written in `spec`.
+Next, we try to find a different way to write these specifications, which compile to the same or similar K reachability proofs created by KLab. Those specifications are written in `spec`.
 
 ## Logics and Calculi
 
