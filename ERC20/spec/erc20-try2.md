@@ -8,12 +8,13 @@ Global configuration parameters. Indicates which distributed VM to target like E
 @config
 target : EVM
 contract : Solidity
-gas : Int = 6000000
+meter : Gas
 ```
 
 Questions:
 
 - Likely skip this for now and default the config to EVM, Solidity, and a maximum gas assumption.
+- NOTE: Include maximum gas assumptions in globals.
 
 ## Storage
 
@@ -22,9 +23,8 @@ Defines the storage variables of the overall contract. This defines later use of
 ```
 @storage
 totalSupply : Int
-address : Address
-balances[address] => balance : Int
-allowances[address] => allowance : Int
+balances[address : Address] => balance : Int
+allowances[address : Address] => allowance : Int
 ```
 
 Questions:
@@ -39,6 +39,7 @@ Global constraints are invariants that should hold for the entire life of a cont
 
 ```
 @global
+gas >= 600000
 totalSupply = 10000
 balance >= 0
 balance <= totalSupply
@@ -52,10 +53,13 @@ Questions:
 
 ## Functions
 
-Define function level specs.
+### Non-state changing functions
+
+Define function level specification.
 
 ```
-@function getBalances
+@pure
+getBalances()
 inputs:
     sender: Address
 
@@ -72,8 +76,13 @@ Questions:
 - Do we need to redefine balance here?
 - Do we infer that this is a pure function as it does not change any parameter?
 
+### State changing functions
+
+Define function level specification.
+
 ```
-@function transfer
+@transition
+transfer(receiver, amount)
 inputs:
     sender: Address
     receiver: Address
@@ -90,3 +99,7 @@ ensures:
     balances[sender] == initial(balances[sender] - amount)
     balances[receiver] == initial(balances[receiver] + amount)
 ```
+
+Questions:
+
+- Again, how to do the function signatures here?
