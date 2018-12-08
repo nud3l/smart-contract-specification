@@ -96,8 +96,8 @@ requires:
     balances[sender] >= amount
 
 ensures:
-    balances[sender] == initial(balances[sender] - amount)
-    balances[receiver] == initial(balances[receiver] + amount)
+    balances[sender] == initial(balances[sender]) - amount
+    balances[receiver] == initial(balances[receiver]) + amount
 ```
 
 Questions:
