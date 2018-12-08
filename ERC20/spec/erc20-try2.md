@@ -40,7 +40,7 @@ Global constraints are invariants that should hold for the entire life of a cont
 ```
 @global
 gas >= 600000
-totalSupply = 10000
+totalSupply == 10000
 balance >= 0
 balance <= totalSupply
 ```
