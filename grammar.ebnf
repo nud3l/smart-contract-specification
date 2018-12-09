@@ -1,47 +1,61 @@
-
+(* Grammar of the smart contract specification language *)
 Block = Statement*;
-Statement = '@' (Configuration | Storage | Global | Function);
+Statement = '@', (Configuration | Storage | Global | Function);
 
+(* Configuration *)
 Configuration = 'config' ConfigurationItem*;
-ConfigurationItem = ConfigurationIdentifier ':' ConfigurationType;
+ConfigurationItem = ConfigurationIdentifier ' : ' ConfigurationTypes;
 ConfigurationIdentifier = 'target' | 'language' | 'meter';
-ConfigurationType = TargetType | LanguageType | MeterType;
+ConfigurationTypes = TargetType | LanguageType | MeterType;
 TargetType = 'EVM' | 'EWASM' | 'IELE' | 'SCILLA';
 ContractType = 'Solidity' | 'Vyper' | 'Flint';
 MeterType = 'Gas';
 
-Storage = 'storage' StorageItem*;
-StorageItem = Identifier ':' BuiltinTypes | MappingItem;
-MappingItem = Mapping ' => ' StorageItem;
-Mapping = Identifier '[' StorageItem ']' | Identifier '[' Identifier ']';
+(* Storage *)
+Storage = 'storage' StorageTyped*;
+StorageTyped = TermTyped | MappingTyped;
+TermTyped = Identifier ' : ' BuiltinTypes;
+MappingTyped = Identifier '[' StorageItem '] => ' Term;
+StorageUntyped = Identifier | Mapping;
 
+
+(* Global specification *)
 Global = 'global' GlobalItem*;
-GlobalItem = Identifier BooleanOperator (Literal | Identifier);
+GlobalItem = Identifier BooleanOperator, (Literal | Identifier);
 
-Function = ('pure' | 'transition') FunctionItem;
-FunctionItem = FunctionSignature (PureFunction | TransitionFunction);
-FunctionSignature = Identifier '(' (Identifier*)? ')';
+(* Function level specification *)
+Function = FunctionDecorator FunctionItem;
+FunctionDecorator = 'pure' | 'transition';
+FunctionItem = FunctionSignature, (PureFunction | TransitionFunction);
+FunctionSignature = Identifier '(', (Identifier*)?, ')';
 PureFunction = Inputs Outputs PostCondition;
 TransitionFunction = Inputs Assign PreCondition PostCondition;
 Inputs = 'inputs:' StorageItem*;
-Outputs = 'outputs:' (Identifier* | StorageItem*);
-Assign = 'assigns:' (Identifier* | Mapping*);
-PreCondition = 'requires:' Condition*;
-PostCondition = 'ensures:' Condition*;
-Condition = (Identifier | Mapping) BooleanOperator ();
+Outputs = 'outputs:', (StorageUntyped | TermTyped)*;
+Assign = 'assigns:', StorageUntyped*;
+PreCondition = 'requires:' BooleanExpression*;
+PostCondition = 'ensures:' BooleanExpression*;
+BooleanExpression = StorageUntyped BooleanOperator, (StorageUntyped | ArithmeticExpression);
+ArithmeticExpression = (StorageUntyped | InitialOperator), ArithmeticOperator StorageUntyped;
 
-
+(* Operators *)
 BooleanOperator = '==' | '<=' | '>=' | '<' | '>';
+ArithmeticOperator = '+' | '-' | '*' | '/';
+InitialOperator = 'initial(' StorageUntyped ')';
 
-Literal = NumberLiteral | StringLiteral | HexLiteral | TrueLiteral | FalseLiteral;
+(* Identifiers *)
+Mapping = Identifier '[' Identifier ']';
 Identifier = [a-zA-Z_$] [a-zA-Z_$0-9]*;
-TypeName = Identifier | BuiltinTypeName;
-BuiltinTypeName = 'bool' | [us] ( '8' | '32' | '64' | '128' | '256' );
+
+(* Types *)
 BuiltinTypes = 'Int' | 'Address' | 'Bool' | 'Asset' | 'String' | 'Bytes';
+
+(* Literals *)
+Literal = NumberLiteral | StringLiteral | HexLiteral | TrueLiteral | FalseLiteral;
 NumberLiteral = HexNumber | DecimalNumber;
-HexLiteral = 'hex' ('"' ([0-9a-fA-F]{2})* '"' | '\'' ([0-9a-fA-F]{2})* '\'');
-StringLiteral = '"' ([^"\r\n\\] | '\\' .)* '"';
-TrueLiteral = 'True';
-FalseLiteral = 'False';
 HexNumber = '0x' [0-9a-fA-F]+;
 DecimalNumber = [0-9]+;
+TrueLiteral = 'True';
+FalseLiteral = 'False';
+HexLiteral = 'hex' ('"' ([0-9a-fA-F]{2})* '"' | '\'' ([0-9a-fA-F]{2})* '\'');
+StringLiteral = '"' ([^"\r\n\\] | '\\' .)* '"';
