@@ -10,14 +10,16 @@ Tools like KLab and their own succinct specification language aim to bridge the 
 
 ## Objectives
 
-- Easy to write language (think Python)
+- Easy to write language
 - Express typical smart contract scenarios in a reasonable length
-- Based on a suitable logic for verifying smart contracts (think separation logic or temporal logic)
-- Compiles into existing statements (for now focus on K as it has a complete semantics implemented)
+- Based on a suitable logic for verifying smart contracts
+- Compiles into existing verification language 
+  - For now focus on K as it has a complete semantics implemented
+  - In the future, consider F*
 
 ## Approach
 
-Generate a range of different contracts in Solidity and compile them to EVM bytecode. New projects are added in the according folder like `Ocontract`.
+Generate a range of different contracts in Solidity and compile them to EVM bytecode. New projects are added in the according folder.
 
 A project has the following structure:
 ```
@@ -27,33 +29,12 @@ project/
 -- spec/
 ```
 
-`src` contains the Solidity contract and the compiled output. KLab requires the contract to be compiled using:
+`src` contains the Solidity contract and the compiled output.
 
-```
-solc --combined-json=abi,bin,bin-runtime,srcmap,srcmap-runtime,ast contract.sol > contract.sol.json
-```
+Next, we try to find a way to write smart contract specifications, which compile to K reachability proofs. Those specifications are written in `spec`.
 
-Next, we create a KLab configuration and specification using K-DSS stored in the `klab` folder. K reachability proofs are created from the specification using:
+To verify the results, we create a KLab configuration and specification using K-DSS stored in the `klab` folder. K proofs in `spec` are verified using the KLab proofs.
 
-```
-cd project/klab
-klab build
-```
+## Grammar
 
-Proofs can be verified using klab server with:
-```
-klab run
-```
-
-Next, we try to find a different way to write these specifications, which compile to the same or similar K reachability proofs created by KLab. Those specifications are written in `spec`.
-
-## Logics and Calculi
-
-We want to try out the following approaches to see their applicability for our approach:
-
-- [ ] Separation logic (including concurrent separation logic)
-- [ ] Temporal logic (LTL and CTL)
-- [ ] Matching logic
-- [ ] Symmetric interaction calculus
-- [ ] Java Modelling Language style (with annotations)
-- [ ] Event calculus (maybe)
+The grammar of the langauge is defined in EBNF in [grammar.ebnf](grammar.ebnf).
