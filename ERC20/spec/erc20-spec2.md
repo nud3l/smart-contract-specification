@@ -11,7 +11,7 @@ contract : Solidity
 meter : Gas
 ```
 
-Questions:
+Comments:
 
 - Likely skip this for now and default the config to EVM, Solidity, and a maximum gas assumption.
 - NOTE: Include maximum gas assumptions in globals.
@@ -31,6 +31,8 @@ Questions:
 
 - Type enforcement? Do we infer special types or keep it more general? One could do like int8 or uint256 to define the types more restrictive. However, this makes it special to the EVM since e.g. Silica or IELE do have unlimited integers.
 - Same problem with address: in K this is also just an integer, with special rules. However, we argue that this should be kept as a separate type.
+- Types: what about a special asset type? Does that bring any benefit on the specification level? Assets are >=0 and might need special access rules?
+- Structs: how to define dictionary/struct types?
 
 
 ## Global
