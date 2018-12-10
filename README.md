@@ -25,8 +25,8 @@ A project has the following structure:
 ```
 project/
 -- src/
--- klab/
 -- spec/
+-- klab/
 ```
 
 `src` contains the Solidity contract and the compiled output.
@@ -35,6 +35,28 @@ Next, we try to find a way to write smart contract specifications, which compile
 
 To verify the results, we create a KLab configuration and specification using K-DSS stored in the `klab` folder. K proofs in `spec` are verified using the KLab proofs.
 
+## Example
+
+Check out the example for the [ERC20 contract specification](ERC20/spec/erc20-spec2.md).
+
 ## Grammar
 
 The grammar of the langauge is defined in EBNF in [grammar.ebnf](grammar.ebnf).
+
+### Coverage
+
+*Storage*
+
+- [x] uint, int
+- [x] bool
+- [x] string, bytes32
+- [x] mappings
+- [ ] structs
+
+*Function input and return*
+
+- [x] uint, int
+- [x] bool
+- [x] string, bytes32
+- [ ] mappings
+- [ ] structs
