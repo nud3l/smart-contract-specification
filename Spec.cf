@@ -1,0 +1,103 @@
+Spec.       Specification ::= [Statement];
+
+terminator Specification "";
+separator nonempty Statement "\n";
+
+-- Configuration
+Config.     Statement ::= "@config" [ConfigurationExp];
+Target.     ConfigurationExp ::= "target : " TargetType;
+TarEVM.     TargetType ::= "EVM";
+TarEWASM.   TargetType ::= "EWASM";
+TarIELE.    TargetType ::= "IELE";
+TarScilla.  TargetType ::= "Scilla";
+Language.   ConfigurationExp ::= "language : " LanguageType;
+LanSol.     LanguageType ::= "Solidity";
+LanVy.      LanguageType ::= "Vyper";
+LanFlin.    LanguageType ::= "Flint";
+Meter.      ConfigurationExp ::= "meter : " MeterType;
+Gas.        MeterType ::= "Gas";
+
+terminator nonempty ConfigurationExp "\n";
+
+-- Storage
+Store.      Statement ::= "@storage" [StorageTypedExp];
+
+SVar.       StorageTypedExp ::= TermTyped;
+SMap.       StorageTypedExp ::= MappingTyped;
+
+SVarDecl.   TermTyped ::= String " : " BuiltinTypes;
+SMapDecl.   MappingTyped ::= String "[" StorageTypedExp "] => " TermTyped;
+
+SUvar.      StorageUntypedExp ::= String;
+SUmap.      StorageUntypedExp ::= Mapping;
+SUmapDecl.  Mapping ::= String "[" StorageUntypedExp "]";
+
+separator StorageTypedExp "," ;
+separator StorageUntypedExp "," ;
+
+terminator nonempty StorageTypedExp "\n";
+
+-- Global
+Global.     Statement ::= "@global" [BooleanExp];
+
+-- Functions
+Pure.       Statement ::= "@pure" FunctionSignature PureFunction;
+FunSig.     FunctionSignature ::= String "(" [StorageUntypedExp] ")";
+
+PureFun.    PureFunction ::= Inputs Outputs PostCondition;
+
+Trans.      Statement ::= "@transition" FunctionSignature TransitionFunction;
+TransFun.   TransitionFunction ::= Inputs Assign PreCondition PostCondition;
+
+In.         Inputs ::= "inputs:\n" [StorageTypedExp];
+Out.        Outputs ::= "outputs:\n" [Returns];
+SReturn.    Returns ::= StorageUntypedExp;
+MReturn.    Returns ::= StorageTypedExp;
+Assig.      Assign ::= "assign:\n" [StorageUntypedExp];
+PreCon.     PreCondition ::= "requires:\n" [BooleanExp];
+PostCon.    PostCondition ::= "ensures:\n" [BooleanExp];
+
+separator Returns "\n";
+terminator PureFunction "\n";
+terminator TransitionFunction "\n";
+terminator nonempty Inputs "\n";
+terminator nonempty Outputs "\n";
+terminator nonempty Assign "\n";
+terminator nonempty PreCondition "\n";
+terminator nonempty PostCondition "\n";
+
+-- Expressions
+BLitExp.    BasicExp ::= Literal;
+BTermExp.   BasicExp ::= StorageUntypedExp;
+BArithExp.  BasicExp ::= ArithmeticExp;
+BInitExp.   BasicExp ::= "initial(" StorageUntypedExp ")";
+BoolExp.    BooleanExp ::= BasicExp Boolean BasicExp;
+ArithExp.   ArithmeticExp ::= BasicExp Arithmetic BasicExp;
+
+terminator nonempty BooleanExp "\n";
+
+-- Operators
+Eq.         Boolean ::= "==";
+GEq.        Boolean ::= ">=";
+LEq.        Boolean ::= "<=";
+Ge.         Boolean ::= ">";
+Le.         Boolean ::= "<";
+Add.        Arithmetic ::= "+";
+Sub.        Arithmetic ::= "-";
+Mul.        Arithmetic ::= "*";
+Div.        Arithmetic ::= "/";
+
+-- Types
+IntType.    BuiltinTypes ::= "Int";
+AddrType.   BuiltinTypes ::= "Address";
+BoolType.   BuiltinTypes ::= "Bool";
+AssetType.  BuiltinTypes ::= "Asset";
+StringType. BuiltinTypes ::= "String";
+BytesType.  BuiltinTypes ::= "Bytes";
+
+-- Literals
+IntLit.     Literal ::= Integer;
+-- Hex.     Literal ::= "0x" [0-9a-fA-F]+;
+TrueLit.    Literal ::= "True";
+FalseLit.   Literal ::= "False";
+StringLit.  Literal ::= String;
